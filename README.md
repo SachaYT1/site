@@ -1,36 +1,29 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Танцевальная студия «Хип-хоп Щелчок» — сайт на Next.js 14 + Tailwind.
 
-## Getting Started
+## Запуск
 
-First, run the development server:
+1. Скопируйте переменные окружения:
+
+```bash
+cp .env.example .env.local
+```
+
+2. Заполните `RESEND_API_KEY` и `RESEND_TO` (или оставьте пустым — заявки будут логироваться в консоль).
+
+3. Запустите dev-сервер:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Откройте `http://localhost:3000`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Главная страница: `src/app/page.tsx`. Разделы: `src/app/about`, `src/app/contacts`.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Интеграция заявок
 
-## Learn More
+Серверное действие: `src/app/actions/lead.ts` (валидация через zod, отправка email через Resend). Компонент формы: `src/app/ui/lead-form.tsx`.
 
-To learn more about Next.js, take a look at the following resources:
+## Деплой
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Рекомендуется Vercел. Перед деплоем задайте переменные окружения `RESEND_API_KEY` и `RESEND_TO`.
