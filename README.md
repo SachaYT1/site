@@ -8,7 +8,7 @@
 cp .env.example .env.local
 ```
 
-2. Заполните `RESEND_API_KEY` и `RESEND_TO` (или оставьте пустым — заявки будут логироваться в консоль).
+2. Заполните `RESEND_API_KEY` и `RESEND_TO` (или оставьте пустым — заявки будут логироваться в консоль). Для БД используется SQLite (`DATABASE_URL="file:./dev.db"`).
 
 3. Запустите dev-сервер:
 
@@ -22,7 +22,9 @@ npm run dev
 
 ## Интеграция заявок
 
-Серверное действие: `src/app/actions/lead.ts` (валидация через zod, отправка email через Resend). Компонент формы: `src/app/ui/lead-form.tsx`.
+Серверное действие: `src/app/actions/lead.ts` (валидация через zod, запись в БД через Prisma, и опциональная отправка email через Resend). Компонент формы: `src/app/ui/lead-form.tsx`.
+
+Панель: `/admin/leads` (Basic Auth через `BASIC_AUTH_USER`/`BASIC_AUTH_PASS`).
 
 ## Деплой
 
