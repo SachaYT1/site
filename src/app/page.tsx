@@ -22,14 +22,21 @@ export default function Home() {
           <p className="text-white/80 max-w-prose">
             Современнный стильный танец — хип-хоп. Тренировки с удовольствием: сила, пластичность, музыкальность и дисциплина. Новые друзья и яркие эмоции. Первое занятие — бесплатно.
           </p>
-          <div className="flex gap-3">
+          <div className="flex flex-col sm:flex-row gap-3">
             <a href="#lead" className="btn-primary">Записаться на пробное</a>
+            {/* Mobile-only duplicate of sticker to avoid overlap and stack buttons */}
+            <a
+              href="#lead"
+              className="sticker-attention sm:hidden rounded-full bg-[#e11d74] text-white text-sm font-semibold px-5 py-3 shadow-lg shadow-pink-500/30 ring-1 ring-white/20 hover:brightness-110 transition"
+            >
+              Идёт набор: от 7 лет
+            </a>
           </div>
         </div>
         <div className="relative z-10 hidden sm:block" />
         
-        {/* Sticker in bottom right corner (instead of logo) */}
-        <div className="absolute bottom-6 right-6 z-20">
+        {/* Sticker in bottom right corner (desktop/tablet only) */}
+        <div className="absolute bottom-6 right-6 z-20 hidden sm:block">
           <a
             href="#lead"
             className="sticker-attention block rounded-full bg-[#e11d74] text-white text-sm font-semibold px-5 py-3 shadow-lg shadow-pink-500/30 ring-1 ring-white/20 hover:brightness-110 transition"

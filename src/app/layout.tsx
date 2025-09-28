@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
+import MobileNav from "./ui/mobile-nav";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -53,11 +54,14 @@ export default function RootLayout({
                 Хип-хоп Щелчок
               </span>
             </Link>
-            <nav className="flex gap-6 text-sm">
+            <nav className="hidden sm:flex gap-6 text-sm">
               <Link href="/" className="hover:underline">Главная</Link>
               <Link href="/about" className="hover:underline">О нас</Link>
               <Link href="/contacts" className="hover:underline">Контакты</Link>
             </nav>
+            <div className="sm:hidden">
+              <MobileNav />
+            </div>
           </header>
           <div className="flex-1">
             {children}
