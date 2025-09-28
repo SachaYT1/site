@@ -42,29 +42,52 @@ export default function Home() {
       {/* Benefits grid below hero */}
       <section className="mt-8 sm:mt-10">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
-          <div className="card flex items-start gap-3">
-            <span className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-white/10">
-              <Image src="/confidence.svg" alt="Уверенность в себе" width={24} height={24} className="opacity-100" />
-            </span>
-            <p className="text-white/90">Уверенность в себе</p>
+          <div className="group card hover:scale-105 transition-transform duration-300 hover:shadow-xl hover:shadow-purple-500/20">
+            <div className="flex items-start gap-3">
+              <span className="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-purple-500/20 to-pink-500/20 ring-1 ring-purple-300/30 group-hover:scale-110 transition-transform">
+                <Image src="/confidence.svg" alt="Уверенность в себе" width={24} height={24} className="opacity-90 group-hover:opacity-100 transition-opacity" />
+              </span>
+              <div>
+                <h3 className="font-semibold text-white group-hover:text-purple-300 transition-colors">Уверенность</h3>
+                <p className="text-sm text-white/70 group-hover:text-white/90 transition-colors">в себе</p>
+              </div>
+            </div>
           </div>
-          <div className="card flex items-start gap-3">
-            <span className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-white/10">
-              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" className="text-white/90"><circle cx="12" cy="12" r="7" strokeWidth="1.6"/><path d="M12 5v7l4 1" strokeWidth="1.6" strokeLinecap="round"/></svg>
-            </span>
-            <p className="text-white/90">Улучшение физической формы</p>
+          
+          <div className="group card hover:scale-105 transition-transform duration-300 hover:shadow-xl hover:shadow-blue-500/20">
+            <div className="flex items-start gap-3">
+              <span className="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-blue-500/20 to-cyan-500/20 ring-1 ring-blue-300/30 group-hover:scale-110 transition-transform">
+                <Image src="/strength.svg" alt="Физическая форма" width={24} height={24} className="opacity-90 group-hover:opacity-100 transition-opacity" />
+              </span>
+              <div>
+                <h3 className="font-semibold text-white group-hover:text-blue-300 transition-colors">Физическая</h3>
+                <p className="text-sm text-white/70 group-hover:text-white/90 transition-colors">форма</p>
+              </div>
+            </div>
           </div>
-          <div className="card flex items-start gap-3">
-            <span className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-white/10">
-              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" className="text-white/90"><path d="M16 11a4 4 0 1 1-8 0 4 4 0 0 1 8 0Z" strokeWidth="1.6"/><path d="M3 20a7 7 0 0 1 18 0" strokeWidth="1.6" strokeLinecap="round"/></svg>
-            </span>
-            <p className="text-white/90">Навыки командной работы и новые друзья</p>
+          
+          <div className="group card hover:scale-105 transition-transform duration-300 hover:shadow-xl hover:shadow-green-500/20">
+            <div className="flex items-start gap-3">
+              <span className="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-green-500/20 to-emerald-500/20 ring-1 ring-green-300/30 group-hover:scale-110 transition-transform">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" className="text-green-300 group-hover:text-green-200 transition-colors"><path d="M16 11a4 4 0 1 1-8 0 4 4 0 0 1 8 0Z" strokeWidth="1.6"/><path d="M3 20a7 7 0 0 1 18 0" strokeWidth="1.6" strokeLinecap="round"/></svg>
+              </span>
+              <div>
+                <h3 className="font-semibold text-white group-hover:text-green-300 transition-colors">Команда</h3>
+                <p className="text-sm text-white/70 group-hover:text-white/90 transition-colors">и друзья</p>
+              </div>
+            </div>
           </div>
-          <div className="card flex items-start gap-3">
-            <span className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-white/10">
-              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" className="text-white/90"><path d="M12 21s-6-4.35-6-9a6 6 0 1 1 12 0c0 4.65-6 9-6 9Z" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/></svg>
-            </span>
-            <p className="text-white/90">Развитие творческих способностей</p>
+          
+          <div className="group card hover:scale-105 transition-transform duration-300 hover:shadow-xl hover:shadow-pink-500/20">
+            <div className="flex items-start gap-3">
+              <span className="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-pink-500/20 to-rose-500/20 ring-1 ring-pink-300/30 group-hover:scale-110 transition-transform">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" className="text-pink-300 group-hover:text-pink-200 transition-colors"><path d="M12 21s-6-4.35-6-9a6 6 0 1 1 12 0c0 4.65-6 9-6 9Z" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/></svg>
+              </span>
+              <div>
+                <h3 className="font-semibold text-white group-hover:text-pink-300 transition-colors">Творческие</h3>
+                <p className="text-sm text-white/70 group-hover:text-white/90 transition-colors">способности</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>

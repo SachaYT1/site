@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Танцевальная студия «Хип-хоп Щелчок» | Щелково",
+  title: "Танцевальная студия «Хип-хоп Щелчок» | Новопеределкино",
   description:
     "Хип-хоп студия в Щелково: тренировки с удовольствием, бесплатное пробное занятие, брейкинг — олимпийский вид спорта.",
   metadataBase: new URL("https://example.com"),
