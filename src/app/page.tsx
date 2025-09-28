@@ -14,21 +14,29 @@ export default function Home() {
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1200px"
         />
         <div className="absolute inset-0 z-0 bg-gradient-to-tr from-[#0b0b12]/80 via-[#9333ea]/30 to-transparent" />
+
         <div className="relative z-10 space-y-5">
-          <p className="text-sm uppercase tracking-wide text-white/70">Танцевальная студия «Хип-хоп Щелчок»</p>
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight text-white">
             Раскройте творческий потенциал вашего ребенка!
           </h1>
           <p className="text-white/80 max-w-prose">
-            Тренировки с удовольствием: сила, пластичность, баланс и дисциплина. Брейкинг —
-            олимпийская дисциплина. Первое занятие — бесплатно.
+            Современнный стильный танец — хип-хоп. Тренировки с удовольствием: сила, пластичность, музыкальность и дисциплина. Новые друзья и яркие эмоции. Первое занятие — бесплатно.
           </p>
           <div className="flex gap-3">
             <a href="#lead" className="btn-primary">Записаться на пробное</a>
-            <a href="#pricing" className="inline-flex items-center justify-center px-5 py-3 rounded-xl border border-white/15 text-white/90 hover:bg-white/5">Тарифы</a>
           </div>
         </div>
         <div className="relative z-10 hidden sm:block" />
+        
+        {/* Sticker in bottom right corner (instead of logo) */}
+        <div className="absolute bottom-6 right-6 z-20">
+          <a
+            href="#lead"
+            className="sticker-attention block rounded-full bg-[#e11d74] text-white text-sm font-semibold px-5 py-3 shadow-lg shadow-pink-500/30 ring-1 ring-white/20 hover:brightness-110 transition"
+          >
+            Идёт набор: от 7 лет
+          </a>
+        </div>
       </section>
 
       {/* Benefits grid below hero */}
@@ -36,27 +44,27 @@ export default function Home() {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
           <div className="card flex items-start gap-3">
             <span className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-white/10">
-              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" className="text-white/90"><path d="M6 14h12M6 10h12M4 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm16 0a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/></svg>
+              <Image src="/confidence.svg" alt="Уверенность в себе" width={24} height={24} className="opacity-100" />
             </span>
-            <p className="text-white/90">Физподготовка: сила, гибкость, координация</p>
+            <p className="text-white/90">Уверенность в себе</p>
           </div>
           <div className="card flex items-start gap-3">
             <span className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-white/10">
-              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" className="text-white/90"><circle cx="12" cy="12" r="7" strokeWidth="1.6"/><path d="M12 5v7l4 2" strokeWidth="1.6" strokeLinecap="round"/></svg>
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" className="text-white/90"><circle cx="12" cy="12" r="7" strokeWidth="1.6"/><path d="M12 5v7l4 1" strokeWidth="1.6" strokeLinecap="round"/></svg>
             </span>
-            <p className="text-white/90">Успеваемость: концентрация и внимание</p>
+            <p className="text-white/90">Улучшение физической формы</p>
           </div>
           <div className="card flex items-start gap-3">
             <span className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-white/10">
               <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" className="text-white/90"><path d="M16 11a4 4 0 1 1-8 0 4 4 0 0 1 8 0Z" strokeWidth="1.6"/><path d="M3 20a7 7 0 0 1 18 0" strokeWidth="1.6" strokeLinecap="round"/></svg>
             </span>
-            <p className="text-white/90">Дисциплина и командный дух</p>
+            <p className="text-white/90">Навыки командной работы и новые друзья</p>
           </div>
           <div className="card flex items-start gap-3">
             <span className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-white/10">
               <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" className="text-white/90"><path d="M12 21s-6-4.35-6-9a6 6 0 1 1 12 0c0 4.65-6 9-6 9Z" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/></svg>
             </span>
-            <p className="text-white/90">Друзья и полезный досуг — спорт вместо гаджетов</p>
+            <p className="text-white/90">Развитие творческих способностей</p>
           </div>
         </div>
       </section>
@@ -76,7 +84,7 @@ export default function Home() {
         <div className="card">
           <h3 className="text-xl font-semibold">Абонемент</h3>
           <p className="text-sm text-white/70">8 занятий в месяц</p>
-          <p className="mt-4 text-3xl font-bold">7000 ₽</p>
+          <p className="mt-4 text-3xl font-bold">5000 ₽</p>
           <ul className="mt-4 text-white/90 space-y-2">
             <li>2 занятия в неделю</li>
             <li>Групповые тренировки</li>
